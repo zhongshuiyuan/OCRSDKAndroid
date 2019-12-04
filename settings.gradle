@@ -1,0 +1,2 @@
+include ':ocrsdk'
+rootProject.name='OCRSDKAndroid'

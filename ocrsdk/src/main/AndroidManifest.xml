@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.turui.android.cameraview" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+<application
+    android:usesCleartextTraffic="true"
+    android:networkSecurityConfig="@xml/network_security">
+
+    <!-- 暂时不支持自动切换方向，但可以支持横屏或竖屏 -->
+    <activity
+        android:name="com.turui.android.activity.CameraActivity"
+        android:screenOrientation="landscape"
+        android:theme="@style/AppThemeFullScreen" />
+
+    <!-- 暂时不支持自动切换方向，但可以支持横屏或竖屏 -->
+    <activity
+        android:name="com.turui.android.activity.WCameraActivity"
+        android:screenOrientation="landscape"
+        android:theme="@style/AppThemeFullScreen" />
+    <activity android:name="com.jxd.wanttospend.IDCardActivity"
+        ></activity>
+
+    <!-- &lt;!&ndash;Google文档&ndash;&gt; -->
+    <!-- <meta-data android:name="android.max_aspect" android:value="3.0"/> -->
+    <!-- &lt;!&ndash;小米手机开启刘海适配&ndash;&gt; -->
+    <!-- <meta-data -->
+    <!-- android:name="notch.config" -->
+    <!-- android:value="portrait|landscape"/> -->
+    <!-- &lt;!&ndash;华为手机开启刘海适配&ndash;&gt; -->
+    <!-- <meta-data android:name="android.notch_support" android:value="true"/> -->
+
+</application>
+
+</manifest>

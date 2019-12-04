@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#4CAF50</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primaryDark">#303F9F</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#727272</color>
+    <declare-styleable name="CameraView"><attr name="android:adjustViewBounds"/><attr format="integer" name="maximumWidth"/><attr format="integer" name="maximumPreviewWidth"/><attr format="boolean" name="useHighResPicture"/><attr format="enum" name="facing">
+            
+            <enum name="back" value="0"/>
+            
+            <enum name="front" value="1"/>
+        </attr><attr format="string" name="cameraAspectRatio"/><attr format="boolean" name="autoFocus"/><attr format="enum" name="flash">
+            
+            <enum name="off" value="0"/>
+            
+            <enum name="on" value="1"/>
+            
+            <enum name="torch" value="2"/>
+            
+            <enum name="auto" value="3"/>
+            
+            <enum name="redEye" value="4"/>
+        </attr><attr format="boolean" name="enableZoom"/><attr format="integer" name="rectCenterXPercent"/><attr format="integer" name="rectCenterYPercent"/><attr format="integer" name="rectPortraitWidthPercent"/><attr format="integer" name="rectPortraitHeightPercentByWidth"/><attr format="integer" name="rectLandscapeWidthPercent"/><attr format="integer" name="rectLandscapeHeightPercentByWidth"/><attr format="dimension|reference" name="alignmentWidth"/><attr format="color|reference" name="alignmentColor"/><attr format="dimension|reference" name="cornerSize"/><attr format="dimension|reference" name="cornerLength"/><attr format="color|reference" name="cornerColor"/><attr format="color|reference" name="maskColor"/></declare-styleable>
+    <style name="AppThemeFullScreen" parent="Theme.Demo">
+        <item name="android:windowNoTitle">true</item> 
+        <item name="android:windowFullscreen">true</item>   
+        <item name="android:windowIsTranslucent">false</item> 
+    </style>
+    <style name="Theme.Demo" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/primaryText</item>
+        <item name="android:textColorSecondary">@color/secondaryText</item>
+    </style>
+    <style name="Widget.CameraView" parent="android:Widget">
+        <item name="android:adjustViewBounds">false</item>
+        <item name="facing">back</item>
+        <item name="cameraAspectRatio">4:3</item>
+        <item name="autoFocus">true</item>
+        <item name="flash">auto</item>
+    </style>
+    <style name="dialog_tip" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+
+    </style>
+</resources>
